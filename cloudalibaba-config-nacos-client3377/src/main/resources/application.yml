@@ -1,0 +1,5 @@
+spring:
+  profiles:
+    active: dev  #dev表示开发
+#    active: test  #test测试
+#    active: info  #test测试

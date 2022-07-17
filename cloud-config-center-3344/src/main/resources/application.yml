@@ -1,0 +1,23 @@
+server:
+  port: 3344
+spring:
+  application:
+    name: cloud-config-center
+  cloud:
+    config:
+      server:
+        git:
+          username: yangzexian2000
+          password: yzx18859590078
+          uri: https://github.com/yangzexian2000/sprincloud-config.git
+          search-paths:
+            - springcloud-config
+          default-label: main
+          skip-ssl-validation: true
+      label: main
+#      http://localhost:3344/main/config-dev.yml 用这个去访问 我本地没配置映射localhost的映射
+eureka:
+  client:
+    service-url:
+      defaultZone:  http://localhost:7001/eureka
+
